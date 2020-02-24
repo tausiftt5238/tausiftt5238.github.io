@@ -429,7 +429,7 @@ margin-left: 0px; /*front  = 0px behind = 62.5*/
 #menu{
 	position: absolute;
 	padding: 10px 0px 10px 40px;
-	width: 250px;
+	width: 300px;
 	list-style: none;
 	background: radial-gradient(-180px 0px,circle ,#0053ad 100px,#001b85 350px,#000223);
      background: -moz-radial-gradient(-180px 0px,circle ,#0053ad 100px,#001b85 350px,#000223);
@@ -497,7 +497,7 @@ margin-left: 0px; /*front  = 0px behind = 62.5*/
 #time{
 	position:absolute;
 	margin: 530px 0px 0px 0px;
-	width: 250px;
+	width: 300px;
 	height: 101px;
 	background: radial-gradient(-40px -290px,circle ,#0053ad 280px,#001b85 350px,#000223);
 	 background: -moz-radial-gradient(-40px -290px,circle ,#0053ad 280px,#001b85 350px,#000223);
