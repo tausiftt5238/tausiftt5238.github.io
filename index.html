@@ -2,51 +2,9 @@
 <html>
 
 <head>
-    <title>Tausif's Academic Website</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Md Tahsin Tausif</title>
+    <link rel="stylesheet" href="style.css">
     <style>
-        body {
-            font-family: Arial;
-        }
-
-        /* Style the tab */
-        .tab {
-            overflow: hidden;
-            /* border: 1px solid #ccc;
-            background-color: #f1f1f1; */
-        }
-
-        /* Style the buttons inside the tab */
-        .tab button {
-            background-color: inherit;
-            float: left;
-            border: none;
-            outline: none;
-            cursor: pointer;
-            padding: 14px 16px;
-            transition: 0.3s;
-            font-size: 17px;
-        }
-
-        /* Change background color of buttons on hover */
-        .tab button:hover {
-            background-color: #ddd;
-        }
-
-        /* Create an active/current tablink class */
-        .tab button.active {
-            background-color: #ccc;
-        }
-
-        /* Style the tab content */
-        .tabcontent {
-            display: none;
-            padding: 6px 12px;
-            /* border: 1px solid #ccc; */
-            border-top: none;
-        }
-
         .collapsible {
             background-color: #777;
             color: white;
@@ -63,291 +21,281 @@
             padding: 0 18px;
             display: none;
             overflow: hidden;
-            background-color: #f1f1f1;
         }
 
         .active,
         .collapsible:hover {
             background-color: #555;
         }
+
+        .my_ul {
+            display: block;
+            list-style-type: disc;
+            margin-top: 1em;
+            margin-bottom: 1 em;
+            margin-left: 0;
+            margin-right: 0;
+            padding-left: 40px;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
     </style>
 </head>
 
+<script>
+    function move_mouse(number) {
+        image_position = document.getElementById("hand_arrow");
+        image_position.style.top = (80 + parseInt(number) * 40) + "px";
+        console.log(80 + parseInt(number) * 40);
+
+        document.getElementById("timeline").style.display = "none";
+        document.getElementById("publications").style.display = "none";
+        document.getElementById("teaching").style.display = "none";
+        document.getElementById("cv").style.display = "none";
+        if (parseInt(number) == 0) document.getElementById("timeline").style.display = "block";
+        else if (parseInt(number) == 1) document.getElementById("publications").style.display = "block";
+        else if (parseInt(number) == 2) document.getElementById("teaching").style.display = "block";
+        else if (parseInt(number) == 3) document.getElementById("cv").style.display = "block";
+        console.log(parseInt(number));
+    }
+</script>
+
 <body>
+    <div id="screen"></div>
+    <img src="https://www.dropbox.com/s/1pq4d1ksjv3tuoz/FF7Cursor.png?raw=1" id="hand_arrow" alt="arrow"
+        style="position: absolute; left: 815px; top: 80px; z-index: 10;">
+    <div id="group">
+        <header id="header">
+            <hgroup>
+                <h1 class="extra">Md Tahsin Tausif</h1>
+                <h2 class="extra">Virginia Tech</h2>
+            </hgroup>
+        </header>
+        <section id="section">
+            <article id="firstCharacter">
+                <figure class="photoContainer"><img id="firstPosition" class="photo" src="profile_pic.jpg"></figure>
+                <table id="firstStats" class="statsTable">
+                    <tr>
+                        <td COLSPAN="3" id="firstName">Md Tahsin Tausif</td>
+                    </tr>
+                    <tr>
+                        <td class="lv">Grad Student</td>
+                    </tr>
+                    <tr>
+                        <td class="hp">Virginia Tech</td>
 
-    <!-- <p>Click on the buttons inside the tabbed menu:</p> -->
-    <div style="display: flex; ">
-        <div style="width: 20%; align-items: center;">
-            <h1><a href="/" style="text-decoration: none; color: black;">Md Tahsin Tausif</a></h1>
+                    </tr>
+                    <tr>
+                        <td class="mp">Blacksburg, VA, USA</td>
 
-            <div style="padding-left: 25%;"> <img src="/profile_pic.jpg" alt="profile_pic"
-                    style="border-radius: 50%; width:50%;"> <br />
-            </div>
-            I'm a grad student working on my PhD in Computer Science at Virginia Tech. <br />
-            Currently I'm working in the field of Human-Computer Interaction. <br />
-            I'm also very interested in Video games as a whole.<br /><br />
-            <div style="display:grid; ">
-                <a style="text-align: left; text-decoration: none; color: black;" href="https://vt.edu/"
-                    target="_blank"><img src="/vt.jpg" alt="vt" width="5%"><span style="padding-left: 5px;">Virginia
-                        Tech</span></a><br />
-                <a style="justify-content: space-around; text-decoration: none; color: black;"
-                    href="mailto:tausiftt52@vt.edu" target="_blank"><img src="/email.png" alt="email" width="5%"><span
-                        style="padding-left: 5px;">Email</span></a><br />
-                <a style="justify-content: space-around; text-decoration: none; color: black;"
-                    href="https://twitter.com/tausiftt52" target="_blank"><img src="/twitter.png" alt="twitter"
-                        width="5%"><span style="padding-left: 5px;">Twitter</span></a><br />
-                <a style="justify-content: space-around; text-decoration: none; color: black;"
-                    href="https://www.linkedin.com/in/tahsin-tausif-898a49123" target="_blank"><img src="/linkedin.png"
-                        alt="linkedin" width="5%"><span style="padding-left: 5px;">LinkedIn</span></a><br />
-                <a style="justify-content: space-around; text-decoration: none; color: black;"
-                    href="https://github.com/tausiftt5238" target="_blank"><img src="/github.png" alt="github"
-                        width="5%"><span style="padding-left: 5px;">Github</span></a><br />
-                <a style="justify-content: space-around; text-decoration: none; color: black;"
-                    href="https://scholar.google.com/citations?user=mfd-4q0AAAAJ&hl=en" target="_blank"><img
-                        src="/google_scholar.png" alt="google_scholar" width="5%"><span
-                        style="padding-left: 5px;">Google Scholar</span></a>
-            </div>
-        </div>
-        <div style="width: 70%; padding-top: 1%;">
-            <div class="tab">
-                <button class="tablinks active" onclick="changeTab(event, 'AboutMe')">About Me</button>
-                <button class="tablinks" onclick="changeTab(event, 'Publication')">Publications</button>
-                <button class="tablinks" onclick="changeTab(event, 'Teaching')">Teaching</button>
-                <button class="tablinks" onclick="changeTab(event, 'BlogPost')">Blog Posts</button>
-                <button class="tablinks" onclick="changeTab(event, 'CV')">CV</button>
-            </div>
+                    </tr>
+                </table>
 
-            <div id="AboutMe" class="tabcontent" style="display: block;">
-                <h1>About Me</h1>
-                <p>I'm a grad student working on my PhD in Computer Science at Virginia Tech.
-                    Currently I'm working under <a href="http://people.cs.vt.edu/sangwonlee/" target="_blank"> Dr. Sang Won Lee </a> in the field of Human-Computer Interaction.
-                    I'm also very interested in Video games as a whole. <br />
-                    <h3>Bio in short</h3>
-                    <ul>
+                <div id="bio" style="font-size: 18px; width: 600px; top: 10px;">
+                    <p>I'm a grad student working on my PhD in Computer Science at Virginia Tech.
+                        Currently I'm working under <a href="http://people.cs.vt.edu/sangwonlee/" target="_blank"
+                            style="text-decoration: none; color:#20B2AA;"> Dr. Sang Won Lee </a> in the field of
+                        Human-Computer Interaction.
+                        I'm also very interested in Video games as a whole. <br />
+                    </p>
+                </div>
+            </article>
+            <article id="secondCharacter">
+                <div id="timeline" style="font-size: 18px; width: 600px;  ">
+                    <h3>Timeline</h3> <br />
+                    <ul style="overflow-x:hidden; overflow-y: scroll; height: 250px;">
                         <li>Started working as a Graduate Instructor in Virginia Tech in Spring 2020.</li>
                         <li>Started working as a Graduate Teaching Assistant in Virginia Tech in Fall 2019.</li>
                         <li>Joined Virginia Tech as a PhD student in Computer Science in Fall 2019.</li>
                         <li>Left Beetles Cyber Security in May 2019.</li>
                         <li>Published the paper <a href="https://ieeexplore.ieee.org/abstract/document/8457100"
-                                target="_blank" style="text-decoration: none;">"Deep
+                                target="_blank" style="text-decoration: none; color:#20B2AA;">"Deep
                                 Learning Based Bangla Speech-to-Text Conversion"</a> in July 2018.</li>
                         <li>Joined Beetles Cyber Security as a Fullstack developer in March 2018.</li>
-                        <li>Graduated in April 2018 from University of Dhaka, Bangladesh with a B.Sc. degree in Computer
+                        <li>Graduated in April 2018 from University of Dhaka, Bangladesh with a B.Sc. degree in
+                            Computer
                             Science and Engineering.</li>
                     </ul>
-                </p>
-            </div>
+                </div>
+                <div id="publications" style="font-size: 18px; width: 600px; display: none;">
+                    <h3>Publications</h3> <br />
 
-            <div id="Publication" class="tabcontent">
-                <h1>Publications</h1>
-                <p>The papers I managed to publish in chronological order.</p>
-                <div>
-                    <ol>
+                    <div style="overflow-x: hidden; overflow-y: scroll; height: 250px;">
                         <li>
                             M. T. Tausif, S. Chowdhury, M. S. Hawlader, M. Hasanuzzaman and H. Heickal,
                             <a href="https://ieeexplore.ieee.org/abstract/document/8457100"
-                                style="text-decoration: none;" target="_blank">"Deep Learning Based Bangla
+                                style="text-decoration: none; color:#20B2AA;" target="_blank">"Deep Learning Based
+                                Bangla
                                 Speech-to-Text Conversion,"</a> 2018 5th International Conference on
-                            Computational Science/ Intelligence and Applied Informatics (CSII), Yonago, 2018, pp. 49-54.
+                            Computational Science/ Intelligence and Applied Informatics (CSII), Yonago, 2018, pp.
+                            49-54.
                         </li>
-                    </ol>
-                </div>
-            </div>
-
-            <div id="Teaching" class="tabcontent">
-                <h1>Teaching</h1>
-                <p>The courses I've taught so far.</p>
-                <div>
-                    <button type="button" class="collapsible">
-                        <h3>CS2505: Introduction to Computer Organization I (Spring 2020)</h3>
-                    </button>
-                    <div id="teaching_1" class="content">
-                        <p>
-                            Undergraduate course, MCB100, Virginia Tech, Spring 2020 <br /> <br />
-                            An introduction to high-level computer architecture and systems concepts, system software
-                            and
-                            programming in C. Covers information representation, basic computer organization,
-                            fundamentals
-                            of
-                            the x86 architecture, the relationship between the C programming language and x86 assembly
-                            language,
-                            the use of debugging and other system tools, and the development of small to medium-sized
-                            software
-                            solutions in C. <br /> <br />
-                            Covers information representation, basic computer organization, fundamentals of the x86
-                            architecture, the relationship between the C programming language and x86 assembly language,
-                            the
-                            use
-                            of debugging and other system tools, and the development of small- to medium-sized software
-                            solutions in C. <br />
-                            Having successfully completed this course, the student will be able to: <br />
-                            <ul>
-                                <li>Understand the representation of information at the hardware level;</li>
-                                <li>Understand the different layers of abstraction in a computing system, i.e., logic
-                                    design,
-                                    computer architecture, machine language, assembly language, high level language;
-                                </li>
-                                <li>Write simple to moderately complex programs in C;</li>
-                                <li>Be able to apply common UNIX tools, such as gdb and objdump, to analyze, debug and
-                                    correct C
-                                    programs;</li>
-                                <li>Be able to operate efficiently in a UNIX command-line environment.</li>
-                            </ul>
-                        </p>
                     </div>
                 </div>
-                <!-- If you wanna add something in this line, use the following format. -->
-                <!-- <div style="padding-top: 5px;">
-            <button type="button" class="collapsible">
-                <h3>Deep Learning Based Bangla Speech-to-Text Conversion</h3>
-            </button>
-        </div> -->
-            </div>
+                <div id="teaching" style="font-size: 18px; width: 600px; display: none;">
+                    <h3>Teaching</h3> <br />
 
-            <div id="BlogPost" class="tabcontent">
-                <h1>Blog Posts</h1>
-                <h3>CS5734: Social Computing and Computer-supported Cooperative Work (Fall 2019)</h3>
-                <p>The blog posts I'd written over the course CS5734. I'm not much of a blog writer, but I felt like I
-                    should share these as an experience.</p>
-                <ol>
-                    <li><a href="http://wordpress.cs.vt.edu/cscw2019/2019/09/12/initial-project-idea/">Initial Project
-                            Idea</a><br />
-                        <b>Published: </b>September 12, 2019
-                    </li>
-                    <li><a
-                            href="http://wordpress.cs.vt.edu/cscw2019/2019/09/25/reading-reflection-on-grounding-in-communication/">Reading
-                            Reflection on Grounding in Communication</a><br />
-                        <b>Published: </b>September 25, 2019
-                    </li>
-                    <li>
-                        <a href="http://wordpress.cs.vt.edu/cscw2019/2019/10/03/reflection-on-social-translucence/">Reflection
-                            on Social Translucence</a><br />
-                        <b>Published: </b>October 03, 2019
-                    </li>
-                    <li>
-                        <a
-                            href="http://wordpress.cs.vt.edu/cscw2019/2019/10/10/reflection-writing-groupware-and-social-dynamics/">Reflection
-                            writing: Groupware and Social Dynamics</a> <br />
-                        <b>Published: </b>October 10, 2019
-                    </li>
-                    <li>
-                        <a href="http://wordpress.cs.vt.edu/cscw2019/2019/10/17/reflection-on-grouplens/">
-                            Reflection on GroupLens</a><br />
-                        <b>Published: </b>October 17, 2019
-                    </li>
-                    <li>
-                        <a
-                            href="http://wordpress.cs.vt.edu/cscw2019/2019/10/31/reflection-on-benefits-of-facebook-friends/">
-                            Reflection on Benefits of Facebook "Friends"</a><br />
-                        <b>Published: </b>October 31, 2019
-                    </li>
-                    <li>
-                        <a
-                            href="http://wordpress.cs.vt.edu/cscw2019/2019/11/07/reflection-on-soylent-a-word-processor-with-a-crowd-inside/">
-                            Reflection on "Soylent: A Word Processor with a Crowd Inside"</a> <br />
-                        <b>Published: </b>November 07, 2019
-                    </li>
-                    <li>
-                        <a
-                            href="http://wordpress.cs.vt.edu/cscw2019/2019/11/14/online-vs-offline-a-reflection-on-trust-without-touch/">Online
-                            vs Offline : A reflection on "Trust without Touch"</a><br />
-                        <b>Published: </b>November 14, 2019
-                    </li>
-                    <li>
-                        <a href="http://wordpress.cs.vt.edu/cscw2019/2019/11/20/reflection-on-cscw/">
-                            Reflection on CSCW</a><br />
-                        <b>Published: </b>November 20, 2019
-                    </li>
-                </ol>
-            </div>
+                    <div style="overflow-x: hidden; overflow-y: scroll; height: 250px;">
+                        <div>
+                            <button type="button" class="collapsible">
+                                <h3>CS2505: Introduction to Computer Organization I (Spring 2020)</h3>
+                            </button>
+                            <div id="teaching_1" class="content">
+                                <p>
+                                    Undergraduate course, MCB100, Virginia Tech, Spring 2020 <br /> <br />
+                                    An introduction to high-level computer architecture and systems concepts, system
+                                    software
+                                    and
+                                    programming in C. Covers information representation, basic computer organization,
+                                    fundamentals
+                                    of
+                                    the x86 architecture, the relationship between the C programming language and x86
+                                    assembly
+                                    language,
+                                    the use of debugging and other system tools, and the development of small to
+                                    medium-sized
+                                    software
+                                    solutions in C. <br /> <br />
+                                    Covers information representation, basic computer organization, fundamentals of the
+                                    x86
+                                    architecture, the relationship between the C programming language and x86 assembly
+                                    language,
+                                    the
+                                    use
+                                    of debugging and other system tools, and the development of small- to medium-sized
+                                    software
+                                    solutions in C. <br />
+                                    Having successfully completed this course, the student will be able to: <br />
+                                    <ul>
+                                        <li>Understand the representation of information at the hardware level;</li>
+                                        <li>Understand the different layers of abstraction in a computing system, i.e.,
+                                            logic
+                                            design,
+                                            computer architecture, machine language, assembly language, high level
+                                            language;
+                                        </li>
+                                        <li>Write simple to moderately complex programs in C;</li>
+                                        <li>Be able to apply common UNIX tools, such as gdb and objdump, to analyze,
+                                            debug
+                                            and
+                                            correct C
+                                            programs;</li>
+                                        <li>Be able to operate efficiently in a UNIX command-line environment.</li>
+                                    </ul>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="cv" style="all: unset; font-size: 18px; width: 600px; display: none;">
+                    <h3>CV</h3> <br />
+                    <div style="overflow-x:hidden; overflow-y: scroll; height: 250px;">
+                        <h4>Education</h4>
+                        <ul class="my_ul">
+                            <li>BSc in Computer Science and Engineering, University of Dhaka, 2018</li>
+                            <li>PhD in Computer Science, Virginia Tech, 2025 (Expected)</li>
+                        </ul>
+                        <h4>Work Experience</h4>
+                        <ul class="my_ul">
+                            <li><b>Beetles</b> <br />
+                                March 2018 - May 2019 <br />
+                                Software Development Engineer <br />
+                                Fullstack Developer (ReactJS, Python Django) and Sysadmin (Ubuntu)
+                            </li>
+                            <li><b>Virginia Tech</b><br />
+                                Fall 2019 <br />
+                                Graduate Teaching Assistant <br />
+                                Helped with the course CS2505, duties included helping students, <br />
+                                proctoring exam and grading
+                                answer scripts and assignments.
+                            </li>
+                            <li><b>Virginia Tech</b> <br />
+                                Spring 2020 <br />
+                                Graduate Instructor <br />
+                                Teaching the course CS2505 (Introduction to Computer Organization I) <br />
+                                on Spring 2020 at Virginia Tech.
+                            </li>
+                        </ul>
+                        <h4>Skills</h4>
+                        <ul class="my_ul">
+                            <li>Programming Languages
+                                <ul class="my_ul">
+                                    <li>C/C++</li>
+                                    <li>Java</li>
+                                    <li>Python</li>
+                                    <li>PHP</li>
+                                    <li>JavaScript</li>
+                                </ul>
+                            </li>
+                            <li>Mobile App Development
+                                <ul class="my_ul">
+                                    <li>Android (Java and XML)</li>
+                                    <li>React Native</li>
+                                </ul>
+                            </li>
+                            <li>Web App Development
+                                <ul class="my_ul">
+                                    <li>Django</li>
+                                    <li>Django REST</li>
+                                    <li>ReactJS</li>
+                                </ul>
+                            </li>
+                            <li>Database Management
+                                <ul class="my_ul">
+                                    <li>MySQL</li>
+                                    <li>PostgreSQL</li>
+                                </ul>
+                            </li>
 
-            <div id="CV" class="tabcontent">
-                <h1>CV</h1>
-                <h3>Education</h3>
-                <ul>
-                    <li>BSc in Computer Science and Engineering, University of Dhaka, 2018</li>
-                    <li>PhD in Computer Science, Virginia Tech, 2025 (Expected)</li>
-                </ul>
-                <h3>Work Experience</h3>
-                <ul>
-                    <li><b>Beetles</b> <br />
-                        March 2018 - May 2019 <br />
-                        Software Development Engineer <br />
-                        Fullstack Developer (ReactJS, Python Django) and Sysadmin (Ubuntu)
-                    </li>
-                    <li><b>Virginia Tech</b><br />
-                        Fall 2019 <br />
-                        Graduate Teaching Assistant <br />
-                        Helped with the course CS2505, duties included helping students, <br />
-                        proctoring exam and grading
-                        answer scripts and assignments.
-                    </li>
-                    <li><b>Virginia Tech</b> <br />
-                        Spring 2020 <br />
-                        Graduate Instructor <br />
-                        Teaching the course CS2505 (Introduction to Computer Organization I) <br />
-                        on Spring 2020 at Virginia Tech.
-                    </li>
-                </ul>
-                <h3>Skills</h3>
-                <ul>
-                    <li>Programming Languages
-                        <ul>
-                            <li>C/C++</li>
-                            <li>Java</li>
-                            <li>Python</li>
-                            <li>PHP</li>
-                            <li>JavaScript</li>
                         </ul>
-                    </li>
-                    <li>Mobile App Development
-                        <ul>
-                            <li>Android (Java and XML)</li>
-                            <li>React Native</li>
-                        </ul>
-                    </li>
-                    <li>Web App Development
-                        <ul>
-                            <li>Django</li>
-                            <li>Django REST</li>
-                            <li>ReactJS</li>
-                        </ul>
-                    </li>
-                    <li>Database Management
-                        <ul>
-                            <li>MySQL</li>
-                            <li>PostgreSQL</li>
-                        </ul>
-                    </li>
+                        <h4>Publications</h4>
+                        <ol class="my_ul">
+                            <li>
+                                M. T. Tausif, S. Chowdhury, M. S. Hawlader, M. Hasanuzzaman and H. Heickal,
+                                "Deep Learning Based Bangla Speech-to-Text Conversion," 2018 5th International
+                                Conference on
+                                Computational Science/ Intelligence and Applied Informatics (CSII), Yonago, 2018, pp.
+                                49-54.
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <aside id="aside">
+            <ul id="menu">
 
-                </ul>
-                <h3>Publications</h3>
-                <ol>
-                    <li>
-                        M. T. Tausif, S. Chowdhury, M. S. Hawlader, M. Hasanuzzaman and H. Heickal,
-                        "Deep Learning Based Bangla Speech-to-Text Conversion," 2018 5th International Conference on
-                        Computational Science/ Intelligence and Applied Informatics (CSII), Yonago, 2018, pp. 49-54.
-                    </li>
-                </ol>
-            </div>
+                <li number="0"><a onclick="move_mouse(0)" style="text-decoration: none;">Timeline</a></li>
+                <li number="1"><a onclick="move_mouse(1)">Publications</a></li>
+                <li number="2"><a onclick="move_mouse(2)">Teaching</a></li>
+                <li number="3"><a onclick="move_mouse(3)">CV</a></li>
+            </ul>
 
-        </div>
+            <ul id="time" style="font-size: 18px; text-align: center;">
+                <li>Last revised: 2/23/2020</li>
+                <li>by Tausif</li>
+            </ul>
+        </aside>
     </div>
-    <script>
-        function changeTab(evt, cityName) {
-            var i, tabcontent, tablinks;
-            tabcontent = document.getElementsByClassName("tabcontent");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-            }
-            tablinks = document.getElementsByClassName("tablinks");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" active", "");
-            }
-            document.getElementById(cityName).style.display = "block";
-            evt.currentTarget.className += " active";
-        }
 
+    <script>
         var coll = document.getElementsByClassName("collapsible");
         var i;
 
@@ -362,9 +310,7 @@
                 }
             });
         }
-
     </script>
-
 </body>
 
 </html>
