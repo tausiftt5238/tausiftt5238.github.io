@@ -75,6 +75,9 @@
         else if (parseInt(number) == 2) document.getElementById("teaching").style.display = "block";
         else if (parseInt(number) == 3) document.getElementById("cv").style.display = "block";
         else if (parseInt(number) == 4) document.getElementById("contact").style.display = "block";
+
+        var audio = document.getElementById("click");
+        audio.play();
         console.log(parseInt(number));
     }
 </script>
@@ -320,6 +323,7 @@
     </div>
     <img src="https://www.dropbox.com/s/1pq4d1ksjv3tuoz/FF7Cursor.png?raw=1" id="hand_arrow" alt="arrow"
         style="position: absolute; left: 815px; top: 80px; z-index: 10;">
+    <audio id="click" src="https://www.dropbox.com/s/fiyx4q2mdwynraj/FF7CursorMove.mp3?raw=1"></audio>
     <script>
         var coll = document.getElementsByClassName("collapsible");
         var i;
