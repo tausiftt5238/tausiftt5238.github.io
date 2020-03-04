@@ -3,6 +3,58 @@
 	padding: 0px;
 }
 
+.collapsible {
+	background-color: #777;
+	color: white;
+	cursor: pointer;
+	padding: 18px;
+	width: 100%;
+	border: none;
+	text-align: left;
+	outline: none;
+	font-size: 15px;
+}
+
+.content {
+	padding: 0 18px;
+	display: none;
+	overflow: hidden;
+}
+
+.active,
+.collapsible:hover {
+	background-color: #555;
+}
+
+.my_ul {
+	display: block;
+	list-style-type: disc;
+	margin-top: 1em;
+	margin-bottom: 1 em;
+	margin-left: 0;
+	margin-right: 0;
+	padding-left: 40px;
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: #555;
+}
+
 header, nav, section, article, aside, footer{
 	font: 29px arial;
 	display:block;
@@ -132,7 +184,7 @@ cursor:pointer;
 
 #section{
 	position: absolute;
-	margin: 35px 0px 0px 100px;
+	margin: 35px 0px 0px 500px;
 	width: 800px;
 	height: 630px;
 	background: radial-gradient(-180px 0px,circle ,#0053ad 300px,#001b85 500px,#000223);
@@ -330,7 +382,7 @@ margin-left: 0px; /*front  = 0px behind = 62.5*/
 	position:absolute;
 	margin-left: 20px;
 	height: 13px;
-	width: 180px;
+	width: 140px;
 	border: 3px solid;
 	background: linear-gradient(to bottom,rgb(46, 46, 46) 20%,rgb(116, 116, 116) 40%,rgb(116, 116, 116) 100%);
 	 background: -moz-linear-gradient(to bottom,rgb(46, 46, 46) 20%,rgb(116, 116, 116) 40%,rgb(116, 116, 116) 100%);
@@ -387,7 +439,7 @@ margin-left: 0px; /*front  = 0px behind = 62.5*/
 	position:absolute;
 	margin-left: 20px;
 	height: 13px;
-	width: 180px;
+	width: 150px;
 	border: 3px solid;
 	background: linear-gradient(to bottom,rgb(46, 46, 46) 20%,rgb(116, 116, 116) 40%,rgb(116, 116, 116) 100%);
 	 background: -moz-linear-gradient(to bottom,rgb(46, 46, 46) 20%,rgb(116, 116, 116) 40%,rgb(116, 116, 116) 100%);
@@ -422,14 +474,14 @@ margin-left: 0px; /*front  = 0px behind = 62.5*/
 
 #aside{
 	position: absolute;
-	margin: 0px 0px 0px 830px;
+	margin: 0px 0px 0px 1230px;
 	z-index: 3;	
 }
 
 #menu{
 	position: absolute;
 	padding: 10px 0px 10px 40px;
-	width: 300px;
+	width: 240px;
 	list-style: none;
 	background: radial-gradient(-180px 0px,circle ,#0053ad 100px,#001b85 350px,#000223);
      background: -moz-radial-gradient(-180px 0px,circle ,#0053ad 100px,#001b85 350px,#000223);
@@ -497,7 +549,7 @@ margin-left: 0px; /*front  = 0px behind = 62.5*/
 #time{
 	position:absolute;
 	margin: 530px 0px 0px 0px;
-	width: 300px;
+	width: 240px;
 	height: 101px;
 	background: radial-gradient(-40px -290px,circle ,#0053ad 280px,#001b85 350px,#000223);
 	 background: -moz-radial-gradient(-40px -290px,circle ,#0053ad 280px,#001b85 350px,#000223);

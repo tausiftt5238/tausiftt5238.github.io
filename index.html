@@ -6,59 +6,6 @@
 
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <style>
-        .collapsible {
-            background-color: #777;
-            color: white;
-            cursor: pointer;
-            padding: 18px;
-            width: 100%;
-            border: none;
-            text-align: left;
-            outline: none;
-            font-size: 15px;
-        }
-
-        .content {
-            padding: 0 18px;
-            display: none;
-            overflow: hidden;
-        }
-
-        .active,
-        .collapsible:hover {
-            background-color: #555;
-        }
-
-        .my_ul {
-            display: block;
-            list-style-type: disc;
-            margin-top: 1em;
-            margin-bottom: 1 em;
-            margin-left: 0;
-            margin-right: 0;
-            padding-left: 40px;
-        }
-
-        ::-webkit-scrollbar {
-            width: 10px;
-        }
-
-        /* Track */
-        ::-webkit-scrollbar-track {
-            background: #f1f1f1;
-        }
-
-        /* Handle */
-        ::-webkit-scrollbar-thumb {
-            background: #888;
-        }
-
-        /* Handle on hover */
-        ::-webkit-scrollbar-thumb:hover {
-            background: #555;
-        }
-    </style>
 </head>
 
 <script>
@@ -82,6 +29,10 @@
         audio.play();
         console.log(parseInt(number));
     }
+    function play_music(){
+        var audio = document.getElementById("click");
+        audio.play();
+    }
 </script>
 
 <body>
@@ -94,42 +45,66 @@
                 <h1 class="extra" style="font-family: 'Press Start 2P';">Virginia Tech</h1>
             </hgroup>
         </header>
-        <section id="section">
+        <section id="section" style="margin: 35px 0px 0px 100px; width: 420px; height: 630px;">
             <article id="firstCharacter">
-                <figure class="photoContainer"><img id="firstPosition" class="photo" src="profile_pic.jpg"></figure>
-                <table id="firstStats" class="statsTable">
+                <figure class="photoContainer" style="position: relative; margin-left: 0px; width: 40%;"><img
+                        id="firstPosition" class="photo" src="profile_pic.jpg"></figure>
+                <table id="firstStats" class="statsTable" style="position:absolute; width: 50%;">
                     <tr>
-                        <td COLSPAN="3" id="firstName" style="font-family: 'Press Start 2P'; font-size: 18px;">Md Tahsin
+                        <td COLSPAN="3" id="firstName" style="font-family: 'Press Start 2P'; font-size: 12px;">Md Tahsin
                             Tausif</td>
                     </tr>
                     <tr>
-                        <td class="lv" style="font-family: 'Press Start 2P'; font-size: 18px;">Grad Student</td>
-                    </tr>
-                    <tr>
-                        <td class="hp" style="font-family: 'Press Start 2P'; font-size: 18px;">Virginia Tech</td>
+                        <td class="hp" style="font-family: 'Press Start 2P'; font-size: 12px;">Virginia Tech</td>
 
                     </tr>
                     <tr>
-                        <td class="mp" style="font-family: 'Press Start 2P'; font-size: 18px;">Blacksburg, VA, USA</td>
-
+                        <td class="hp" style="font-family: 'Press Start 2P'; font-size: 12px;">
+                            <div>
+                                <div>1st year PhD </div>
+                                <div class="limitBar" style="left: -20px; width: 20px;"></div>
+                                <div class="limitBarFont" style="left: -20px;"></div>
+                            </div>
+                        </td>
                     </tr>
+                    <!-- <tr>
+                        <td id ="firstLimitLevel">Limit level &nbsp;1<div id ="firstLimitBar" class = "limitBar"></div><div class = "limitBarFont"></div></td>
+                    </tr> -->
+
+                    <!-- <tr>
+                        <td class="mp" style="font-family: 'Press Start 2P'; font-size: 12px;">Blacksburg, VA, USA</td>
+
+                    </tr> -->
                 </table>
 
                 <div id="bio"
-                    style="font-size: 18px; width: 600px; top: 10px; font-family: 'Press Start 2P'; font-size: 18px;">
-                    <p>I'm a grad student working on my PhD in Computer Science at Virginia Tech.
+                    style="font-size: 12px; width: 320px; padding-top: 30px; font-family: 'Press Start 2P'; font-size: 12px;">
+                    <p>I'm a 1st year PhD student in Computer Science at Virginia Tech.
                         Currently I'm working under <a href="http://people.cs.vt.edu/sangwonlee/" target="_blank"
                             style="text-decoration: none; color:#20B2AA;"> Dr. Sang Won Lee </a> in the field of
-                        Human-Computer Interaction.
-                        I'm also very interested in Video games as a whole. <br />
+                        Human-Computer Interaction.<br /> I focus on the communication aspect of human interaction over
+                        the
+                        internet. VR/AR/MR is one of the topics I'm focusing on currently, to see how much of their
+                        potential we can explore. I'm also interested in finding the impact video games have on our
+                        lives. <br /> I recieved my B.Sc. degree in Computer Science and Engineering from University of
+                        Dhaka, Bangladesh on 2018. <br /> <br />
+                        My research interests include:
+                        <ul class="my_ul">
+                            <li>HCI</li>
+                            <li>VR/AR/MR</li>
+                            <li>Video Games</li>
+                        </ul>
                     </p>
                 </div>
             </article>
+        </section>
+        <section id="section">
+
             <article id="secondCharacter">
                 <div id="timeline"
-                    style="font-size: 18px; width: 600px; font-family: 'Press Start 2P'; font-size: 18px; ">
+                    style="font-size: 12px; width: 600px; font-family: 'Press Start 2P'; font-size: 12px; ">
                     <h3>Timeline</h3> <br />
-                    <ul class="my_ul" style="overflow-x:hidden; overflow-y: scroll; height: 200px;">
+                    <ul class="my_ul" style="overflow-x:hidden; overflow-y: scroll; height: 480px">
                         <li>Started working as a Graduate Instructor in Virginia Tech in Spring 2020.</li>
                         <li>Started working as a Graduate Teaching Assistant in Virginia Tech in Fall 2019.</li>
                         <li>Joined Virginia Tech as a PhD student in Computer Science in Fall 2019.</li>
@@ -144,11 +119,11 @@
                     </ul>
                 </div>
                 <div id="publications"
-                    style="font-size: 18px; width: 600px; display: none; font-family: 'Press Start 2P'; font-size: 18px;">
+                    style="font-size: 12px; width: 600px; display: none; font-family: 'Press Start 2P'; font-size: 12px;">
                     <h3>Publications</h3> <br />
 
                     <div>
-                        <ul class="my_ul" style="overflow-x: hidden; overflow-y: scroll; height: 200px;">
+                        <ul class="my_ul" style="overflow-x: hidden; overflow-y: scroll; height: 480px">
                             <li>
                                 M. T. Tausif, S. Chowdhury, M. S. Hawlader, M. Hasanuzzaman and H. Heickal,
                                 <a href="https://ieeexplore.ieee.org/abstract/document/8457100"
@@ -162,13 +137,13 @@
                     </div>
                 </div>
                 <div id="teaching"
-                    style="font-size: 18px; width: 600px; display: none; font-family: 'Press Start 2P'; font-size: 18px;">
+                    style="font-size: 12px; width: 600px; display: none; font-family: 'Press Start 2P'; font-size: 12px;">
                     <h3>Teaching</h3> <br /> <br />
 
-                    <div style="overflow-x: hidden; overflow-y: scroll; height: 200px;">
+                    <div style="overflow-x: hidden; overflow-y: scroll; height: 480px">
                         <div>
-                            <button type="button" class="collapsible">
-                                <h3 style="font-family: 'Press Start 2P'; font-size: 18px;">CS2505: Introduction to
+                            <button type="button" class="collapsible" onclick="play_music()">
+                                <h3 style="font-family: 'Press Start 2P'; font-size: 12px;">CS2505: Introduction to
                                     Computer Organization I (Spring 2020)</h3>
                             </button>
                             <div id="teaching_1" class="content">
@@ -219,9 +194,9 @@
                     </div>
                 </div>
                 <div id="cv"
-                    style="all: unset; font-size: 18px; width: 600px; display: none; font-family: 'Press Start 2P'; font-size: 18px;">
+                    style="all: unset; font-size: 12px; width: 600px; display: none; font-family: 'Press Start 2P'; font-size: 12px;">
                     <h3>CV</h3> <br /> <br />
-                    <div style="overflow-x:hidden; overflow-y: scroll; height: 200px;">
+                    <div style="overflow-x:hidden; overflow-y: scroll; height: 480px">
                         <h4>Education</h4>
                         <ul class="my_ul">
                             <li>BSc in Computer Science and Engineering, University of Dhaka, 2018</li>
@@ -293,7 +268,7 @@
                     </div>
                 </div>
                 <div id="contact"
-                    style="all: unset; font-size: 18px; width: 600px; display: none; font-family: 'Press Start 2P'; font-size: 18px;">
+                    style="all: unset; font-size: 12px; width: 600px; display: none; font-family: 'Press Start 2P'; font-size: 12px;">
                     <h3>Contact Info</h3> <br />
                     <h5>Here's a few way you can contact me:</h5> <br />
                     <a style="justify-content: space-around; text-decoration: none; color: #20B2AA;"
@@ -317,7 +292,7 @@
             </article>
         </section>
         <aside id="aside">
-            <ul id="menu" style="font-family: 'Press Start 2P'; font-size: 18px;">
+            <ul id="menu" style="font-family: 'Press Start 2P'; font-size: 12px;">
 
                 <li number="0"><a onclick="move_mouse(0)">Timeline</a></li>
                 <li number="1"><a onclick="move_mouse(1)">Publications</a></li>
@@ -327,13 +302,13 @@
 
             </ul>
 
-            <ul id="time" style="text-align: center; font-family: 'Press Start 2P'; font-size: 18px;">
-                <li>Last revised: 2/23/2020</li>
+            <ul id="time" style="text-align: center; font-family: 'Press Start 2P'; font-size: 12px;">
+                <li>Last revised: 3/4/2020</li>
             </ul>
         </aside>
     </div>
     <img src="https://www.dropbox.com/s/1pq4d1ksjv3tuoz/FF7Cursor.png?raw=1" id="hand_arrow" alt="arrow"
-        style="position: absolute; left: 815px; top: 80px; z-index: 10;">
+        style="position: absolute; left: 1215px; top: 80px; z-index: 10;">
     <audio id="click" src="https://www.dropbox.com/s/fiyx4q2mdwynraj/FF7CursorMove.mp3?raw=1"></audio>
     <script>
         var coll = document.getElementsByClassName("collapsible");
